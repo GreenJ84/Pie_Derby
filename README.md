@@ -1,9 +1,11 @@
 # Pie Derby
 
 A Full-stack Python CRUD Application
-    -  Flak App
-    - bcrypt security
-    - SQL Database
+
+    Utilizes
+        - Flask
+        - bcrypt security
+        - SQL Database
   
 - Register/ Login to gain access
     - bcrypt password hashing
