@@ -35,7 +35,7 @@
                 <th>Name</th>
                 <th>Actions</th>
             </tr>
-            {% if pie %}
+            {% for pie in pies %}
             <tr>
                 <td>{{pie.name}} {{pie.last}}</td>
                 <td>

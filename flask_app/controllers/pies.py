@@ -59,7 +59,7 @@ def view_pies():
     if 'user_id' not in session:
         return redirect('/')
 
-    pies = Pie.get_all_pies()[{},{},{},{}]
+    pies = Pie.get_all_pies()
 
 
     return render_template('pie_derby.html', pies = pies)
