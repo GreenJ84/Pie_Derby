@@ -44,15 +44,14 @@ class Pie():
     @classmethod
     def get_all_pies(cls):
         
-        query = "SELECT pies.id, pies.name, users.first_name, COUNT(votes.id) as votes FROM pies JOIN users ON pies.user_pie_id = users.id LEFT JOIN votes ON pies.id = votes.pie_id GROUP BY pies.id, votes.id ORDER BY votes DESC;"
+        query = "SELECT pies.id, pies.name, users.first_name, COUNT(votes.id) as votes FROM pies JOIN users ON pies.user_pie_id = users.id LEFT JOIN votes ON pies.id = votes.pie_id GROUP BY pies.id ORDER BY votes DESC;"
         results = connectToMySQL('pie_derby').query_db(query)
 
         pies = []
 
         for item in results:
             pies.append(cls(item))
-            print(item)
-
+            print(item);
         return pies
 
 #======================== GetAll Pies created by User ==============
